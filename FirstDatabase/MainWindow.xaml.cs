@@ -24,8 +24,8 @@ namespace FirstDatabase
         OleDbConnection cn;
         public MainWindow()
         {
-            cn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source =| DataDirectory |Database11.accdb");
-            InitializeComponent();
+            cn = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source =C:\\Users\\colew\\Source\\Repos\\MyFirstDatabase\\FirstDatabase\\CloneDataBase.accdb");
+            //InitializeComponent();
             
         }
 
@@ -39,8 +39,10 @@ namespace FirstDatabase
             while (read.Read())
             {
                 data += read[0].ToString() + "\n";
-                TextArea.ToString();
+                
             }
+            TextArea.Text = data;
+            cn.Close();
         }
     }
 }

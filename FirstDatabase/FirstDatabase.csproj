@@ -16,7 +16,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -63,6 +63,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CloneDataBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CloneDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Database11DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -91,6 +96,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="CloneDataBaseDataSet.xsc">
+      <DependentUpon>CloneDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CloneDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CloneDataBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CloneDataBaseDataSet.xss">
+      <DependentUpon>CloneDataBaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Database11DataSet.xsc">
       <DependentUpon>Database11DataSet.xsd</DependentUpon>
     </None>
@@ -111,6 +127,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CloneDataBase.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Database11.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
